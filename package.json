@@ -4,11 +4,11 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html --out-dir build",
+    "build": "parcel build index.html --out-dir release",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "homepage": "https://sparklefaerie.github.io/",
-    "deploy": "gh-pages -b master -d build"
+    "deploy": "gh-pages -b master -d release"
   },
   "dependencies": {
     "node-sass": "^4.13.0",

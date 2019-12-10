@@ -12,7 +12,7 @@ class App extends React.Component<Props> {
         return <div>
             <Header/>
             <div className="container">
-                <h1>Hello {this.props.name}</h1>
+                <h1>Hello, my name is {this.props.name}</h1>
             </div>
         </div>
     }

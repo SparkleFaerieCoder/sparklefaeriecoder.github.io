@@ -5,7 +5,7 @@ dist/
 bin/
 lib/
 node_modules/
-build
+release/
 .DS_Store
 *.tgz
 my-app*
