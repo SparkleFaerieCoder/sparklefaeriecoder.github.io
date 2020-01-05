@@ -1,21 +1,21 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import Header from './components/Header'
-import './scss/app.scss'
+import React from 'react';
+import Header from './components/Header';
+// import {Button, Menu} from 'grommet';
 
-interface Props {
-    name: string
-}
+//   <Header background='brand'>
+//     <Button hoverIndicator />
+//     {/* <Menu label="account" items={[{label: 'logout'}]} /> */}
+//   </Header>
 
-class App extends React.Component<Props> {
-    render() {
-        return <div>
-            <Header/>
-            <div className="container">
-                <h1>Hello, my name is {this.props.name}</h1>
-            </div>
-        </div>
-    }
-}
+const App = () => {
+  return (
+    <div>
+      <Header/>
+      <div>
+        <h1>Coming soon</h1>
+      </div>
+    </div>
+  );
+};
 
-ReactDOM.render(<App name="Alex" />, document.getElementById("app"));
+export default App;

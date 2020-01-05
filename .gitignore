@@ -18,3 +18,5 @@ package-lock.json
 /.changelog
 .npm/
 yarn.lock
+.env
+.env.local
