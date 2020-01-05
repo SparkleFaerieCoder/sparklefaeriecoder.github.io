@@ -1,15 +1,28 @@
 import React from 'react';
+import {Anchor, Header as GrommetHeader, Box, Button} from 'grommet';
+import {Search} from 'grommet-icons';
 
-const Header = () => (
-  <header>
-    <nav className="navbar" role="navigation" aria-label="main navigation">
-      <div className="navbar-brand">
-        {/* <a className="navbar-item" href="/">
-                    <img width="120" src={ParcelLogo} alt=""/>
-                </a> */}
-      </div>
-    </nav>
-  </header>
+export const Avatar = ({...rest}) => (
+  <Box
+    height="xxsmall"
+    width="xxsmall"
+    round="full"
+    background="url(//s.gravatar.com/avatar/b7fb138d53ba0f573212ccce38a7c43b?s=80)"
+    {...rest}
+  />
+);
+
+export const Header = () => (
+  <GrommetHeader background="transparent" pad="large" justify='end' height={{min: '25', max: '500'}}>
+    <Box direction="row" gap="medium">
+      <Anchor label="Home" href="#" />
+      <Anchor label="About" href="#" />
+      <Anchor label="Contact" href="#" />
+    </Box>
+    <Box>
+      <Button plain={true} icon={<Search color='brand' />} onClick={() => {}}/>
+    </Box>
+  </GrommetHeader>
 );
 
 export default Header;
