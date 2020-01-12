@@ -1,8 +1,35 @@
 import React from 'react';
-import Header from '../components/Header';
 import {auth} from '../services/firebase-service';
 import {Button, Box, Text, Image, Heading, Paragraph} from 'grommet';
+import {Header, Gallery, Footer, Grid} from '../components';
 import {Linkedin, Github, Twitter} from 'grommet-icons';
+
+const posts = [
+  {
+    src: '//v2.grommet.io/assets/IMG_4245.jpg',
+    title: 'title',
+  },
+  {
+    src: '//v2.grommet.io/assets/IMG_4245.jpg',
+    title: 'title',
+  },
+  {
+    src: '//v2.grommet.io/assets/IMG_4245.jpg',
+    title: 'title',
+  },
+  {
+    src: '//v2.grommet.io/assets/IMG_4245.jpg',
+    title: 'title',
+  },
+  {
+    src: '//v2.grommet.io/assets/IMG_4245.jpg',
+    title: 'title',
+  },
+  {
+    src: '//v2.grommet.io/assets/IMG_4245.jpg',
+    title: 'title',
+  },
+];
 
 const Home = () => {
   return (
@@ -26,26 +53,44 @@ const Home = () => {
         </Box>
       </Box>
       <Box direction='row' alignContent='start' pad='xlarge' height='large'>
-        <Box width='50%' justify='center' pad='large' gap='small'>
-          <Box direction='row'>
-            <Box pad='small'>
-              <Box border={{size: 'small', side: 'right', color: 'gray'}} pad={{right: 'medium'}}>
-                <Heading level='1'>16</Heading>
-                <Text>APR</Text>
+        <Grid
+          columns={['1/2', '1/2']}
+          rows={['medium', 'medium']}
+          gap="small"
+          areas={{
+            small: [
+              {name: 'caption', start: [0, 1], end: [1, 1]},
+              {name: 'image', start: [0, 0], end: [1, 0]},
+            ],
+            medium: [
+              {name: 'caption', start: [0, 0], end: [0, 0]},
+              {name: 'image', start: [1, 0], end: [1, 0]},
+            ],
+          }}
+        >
+          <Box gridArea='caption' justify='center' pad='large' gap='small'>
+            <Box direction='row'>
+              <Box pad='small'>
+                <Box border={{size: 'small', side: 'right', color: 'gray'}} pad={{right: 'medium'}}>
+                  <Heading level='1'>16</Heading>
+                  <Text>APR</Text>
+                </Box>
+              </Box>
+              <Box justify='center'>
+                <Heading level='2' textAlign='start'>Lorem ipsum dolor sita creem</Heading>
               </Box>
             </Box>
-            <Box justify='center'>
-              <Heading level='2' textAlign='start'>Lorem ipsum dolor sita creem</Heading>
+            <Box >
+              <Paragraph textAlign='start'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti officia velit nulla ipsa, consequuntur accusamus cupiditate voluptas nam explicabo, debitis quis? Enim soluta quibusdam aspernatur quo explicabo necessitatibus. Qui, facilis.</Paragraph>
             </Box>
           </Box>
-          <Box >
-            <Paragraph textAlign='start'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti officia velit nulla ipsa, consequuntur accusamus cupiditate voluptas nam explicabo, debitis quis? Enim soluta quibusdam aspernatur quo explicabo necessitatibus. Qui, facilis.</Paragraph>
+          <Box gridArea='image' justify='center' pad='large' gap='small'>
+            <Image src="//v2.grommet.io/assets/IMG_4245.jpg" fit="cover" />
           </Box>
-        </Box>
-        <Box width='50%'>
-          <Image src="//v2.grommet.io/assets/IMG_4245.jpg" fit="cover" />
-        </Box>
+        </Grid>
       </Box>
+      <Gallery data={posts}/>
+      <Footer/>
     </Box>
   );
 };
