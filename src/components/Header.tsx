@@ -15,9 +15,9 @@ export const Avatar = ({...rest}) => (
 export const Header = () => (
   <GrommetHeader background="transparent" pad="large" justify='end' height={{min: '25', max: '500'}}>
     <Box direction="row" gap="medium">
-      <Anchor label="Home" href="#" />
-      <Anchor label="About" href="#" />
-      <Anchor label="Contact" href="#" />
+      <Anchor label="Home" href="#" a11yTitle="Home"/>
+      <Anchor label="About" href="#" a11yTitle="About"/>
+      <Anchor label="Contact" href="#" a11yTitle="Contact"/>
     </Box>
     <Box>
       <Button plain={true} icon={<Search color='brand' />} onClick={() => {}}/>

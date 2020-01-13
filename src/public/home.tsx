@@ -6,28 +6,40 @@ import {Linkedin, Github, Twitter} from 'grommet-icons';
 
 const posts = [
   {
+    id: '123',
     src: '//v2.grommet.io/assets/IMG_4245.jpg',
     title: 'title',
+    url: '#',
   },
   {
+    id: '456',
     src: '//v2.grommet.io/assets/IMG_4245.jpg',
     title: 'title',
+    url: '#',
   },
   {
+    id: '789',
     src: '//v2.grommet.io/assets/IMG_4245.jpg',
     title: 'title',
+    url: '#',
   },
   {
+    id: '1011',
     src: '//v2.grommet.io/assets/IMG_4245.jpg',
     title: 'title',
+    url: '#',
   },
   {
+    id: '1213',
     src: '//v2.grommet.io/assets/IMG_4245.jpg',
     title: 'title',
+    url: '#',
   },
   {
+    id: '1415',
     src: '//v2.grommet.io/assets/IMG_4245.jpg',
     title: 'title',
+    url: '#',
   },
 ];
 
