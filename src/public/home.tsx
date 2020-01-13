@@ -33,7 +33,7 @@ const posts = [
 
 const Home = () => {
   return (
-    <Box>
+    <>
       <Box background='#efefef'>
         <Header/>
         <Box border='all' pad='xlarge'>
@@ -91,7 +91,7 @@ const Home = () => {
       </Box>
       <Gallery data={posts}/>
       <Footer/>
-    </Box>
+    </>
   );
 };
 
