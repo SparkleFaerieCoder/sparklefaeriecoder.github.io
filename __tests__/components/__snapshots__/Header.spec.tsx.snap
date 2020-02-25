@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<header
+  className="StyledBox-sc-13pk1d4-0 kNAqbK"
+>
+  <div
+    className="StyledBox-sc-13pk1d4-0 jmYunQ"
+  >
+    <a
+      aria-label="Home"
+      className="StyledAnchor-sc-1rp7lwl-0 jgeOSx"
+      href="#"
+      onBlur={[Function]}
+      onFocus={[Function]}
+    >
+      Home
+    </a>
+    <div
+      className="StyledBox__StyledBoxGap-sc-13pk1d4-1 hyyRSo"
+    />
+    <a
+      aria-label="About"
+      className="StyledAnchor-sc-1rp7lwl-0 jgeOSx"
+      href="#"
+      onBlur={[Function]}
+      onFocus={[Function]}
+    >
+      About
+    </a>
+    <div
+      className="StyledBox__StyledBoxGap-sc-13pk1d4-1 hyyRSo"
+    />
+    <a
+      aria-label="Contact"
+      className="StyledAnchor-sc-1rp7lwl-0 jgeOSx"
+      href="#"
+      onBlur={[Function]}
+      onFocus={[Function]}
+    >
+      Contact
+    </a>
+  </div>
+  <div
+    className="StyledBox__StyledBoxGap-sc-13pk1d4-1 hyyRSo"
+  />
+  <div
+    className="StyledBox-sc-13pk1d4-0 koruWX"
+  >
+    <button
+      className="StyledButton-sc-323bzc-0 laBEqz"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+      type="button"
+    >
+      <svg
+        aria-label="Search"
+        className="StyledIcon-ofa7kd-0 dSllCE"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M15,15 L22,22 L15,15 Z M9.5,17 C13.6421356,17 17,13.6421356 17,9.5 C17,5.35786438 13.6421356,2 9.5,2 C5.35786438,2 2,5.35786438 2,9.5 C2,13.6421356 5.35786438,17 9.5,17 Z"
+          fill="none"
+          stroke="#000"
+          strokeWidth="2"
+        />
+      </svg>
+    </button>
+  </div>
+</header>
+`;

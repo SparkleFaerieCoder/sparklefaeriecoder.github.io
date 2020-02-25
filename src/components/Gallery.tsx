@@ -1,18 +1,20 @@
 import React, {useState, useContext, useEffect} from 'react';
-import {Image, Box, Text, ResponsiveContext, Stack} from 'grommet';
+import {Image, Box, ResponsiveContext} from 'grommet';
+import PostHeader from './Post/Header';
 
 interface Post {
     src: string,
     title: string,
+    description: string,
+    createdOn: Date,
     url: string
-}
+  }
 
 interface Props {
     container?: Object,
     data: Array<Post>
 
 }
-
 
 const set = (posts: Array<Post>) => {
   let array = [];
@@ -41,7 +43,7 @@ const getImageSize = (display: string, row: number, column: number): string => {
 };
 
 
-export const Gallery = (props: Props) => {
+const Gallery = (props: Props) => {
   const [columns, setColumns] = useState([]);
   const [hover, toggleHover] = useState({index: undefined});
 
@@ -57,62 +59,60 @@ export const Gallery = (props: Props) => {
   const sizeSmall = size === 'small';
 
   return (
-    <>
-      <Box direction={sizeSmall ? 'column': 'row'}>
-        {
-          columns.map((column, i) => {
-            const posts = column;
-            return (
-
-              <Box
-                key={i}
-                background={`dark-1`}
-                width={{min: sizeSmall ? '100%': '33%'}}
-                direction={'column'}
-              >
-                {
-                  posts.map((post, e) => (
-                    <Box key={e} style={{position: 'relative', overflow: 'hidden'}}>
-                      <Box
+    <Box direction={sizeSmall ? 'column': 'row'}>
+      {
+        columns.map((column, i) => {
+          const posts = column;
+          return (
+            <Box
+              key={i}
+              background={`dark-1`}
+              width={{min: sizeSmall ? '100%': '33%'}}
+              direction={'column'}>
+              {
+                posts.map((post, e) => (
+                  <Box key={e} style={{position: 'relative', overflow: 'hidden'}}>
+                    <Box
+                      key={e}
+                      height={getImageSize(size, e, i)}
+                      width={{min: '100%'}}
+                      style={{zIndex: 1}}
+                    >
+                      <Image
                         key={e}
-                        height={getImageSize(size, e, i)}
-                        width={{min: '100%'}}
-                        style={{zIndex: 1}}
-                      >
-                        <Image
-                          key={e}
-                          src={post.src}
-                          fit={'cover'}
-                        />
-                      </Box>
-
-                      <Box
-                        onMouseEnter={() => toggle(post.id)}
-                        onMouseLeave={() => toggle()}
-                        style={{
-                          position: 'absolute',
-                          backgroundColor: 'black',
-                          width: '100%',
-                          bottom: 0,
-                          height: '100%',
-                          zIndex: 1000,
-                          opacity: hover.index === post.id ? 0.5 : 0,
-                        }}
-                        justify='end'
-                      >
-                        <Text textAlign='start' alignSelf='stretch'>{post.title}</Text>
-                      </Box>
+                        src={post.src}
+                        fit={'cover'}
+                      />
                     </Box>
-                  ))
-                }
 
-              </Box>
-            );
-          })
-        }
-      </Box>
-    </>
+                    <Box
+                      onMouseEnter={() => toggle(post.id)}
+                      onMouseLeave={() => toggle()}
+                      style={{
+                        position: 'absolute',
+                        width: '100%',
+                        bottom: 0,
+                        height: '100%',
+                        zIndex: 1000,
+                        opacity: hover.index === post.id ? 0.5 : 0,
+                      }}
+                      animation={hover.index === post.id ? 'fadeIn': 'fadeOut'}
+                      justify='end'
+                    >
+                      <PostHeader data={post} backgroundColor='black' color='white' layout='row'/>
+                    </Box>
+                  </Box>
+                ))
+              }
+            </Box>
+          );
+        })
+      }
+    </Box>
   );
 };
 
+
 export default Gallery;
+
+

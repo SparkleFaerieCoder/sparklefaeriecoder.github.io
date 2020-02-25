@@ -1,44 +1,74 @@
 import React from 'react';
 import {auth} from '../services/firebase-service';
 import {Button, Box, Text, Image, Heading, Paragraph} from 'grommet';
-import {Header, Gallery, Footer, Grid} from '../components';
+import {Header, Gallery, Footer, Grid, PostHeader} from '../components';
 import {Linkedin, Github, Twitter} from 'grommet-icons';
 
 const posts = [
   {
     id: '123',
     src: '//v2.grommet.io/assets/IMG_4245.jpg',
-    title: 'title',
+    title: 'Lorem ipsum dolor sit',
+    description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
+       Vel dolores voluptatem repudiandae voluptates voluptate cupiditate
+       explicabo omnis et, blanditiis, iure autem, sint laborum. 
+       Reiciendis in animi non, sed cumque minima?`,
+    createdOn: new Date(),
     url: '#',
   },
   {
     id: '456',
     src: '//v2.grommet.io/assets/IMG_4245.jpg',
-    title: 'title',
+    title: 'Lorem ipsum dolor sit',
+    description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
+       Vel dolores voluptatem repudiandae voluptates voluptate cupiditate
+       explicabo omnis et, blanditiis, iure autem, sint laborum. 
+       Reiciendis in animi non, sed cumque minima?`,
+    createdOn: new Date(),
     url: '#',
   },
   {
     id: '789',
     src: '//v2.grommet.io/assets/IMG_4245.jpg',
-    title: 'title',
+    title: 'Lorem ipsum dolor sit',
+    description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
+       Vel dolores voluptatem repudiandae voluptates voluptate cupiditate
+       explicabo omnis et, blanditiis, iure autem, sint laborum. 
+       Reiciendis in animi non, sed cumque minima?`,
+    createdOn: new Date(),
     url: '#',
   },
   {
     id: '1011',
     src: '//v2.grommet.io/assets/IMG_4245.jpg',
-    title: 'title',
+    title: 'Lorem ipsum dolor sit',
+    description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
+       Vel dolores voluptatem repudiandae voluptates voluptate cupiditate
+       explicabo omnis et, blanditiis, iure autem, sint laborum. 
+       Reiciendis in animi non, sed cumque minima?`,
+    createdOn: new Date(),
     url: '#',
   },
   {
     id: '1213',
     src: '//v2.grommet.io/assets/IMG_4245.jpg',
-    title: 'title',
+    title: 'Lorem ipsum dolor sit',
+    description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
+       Vel dolores voluptatem repudiandae voluptates voluptate cupiditate
+       explicabo omnis et, blanditiis, iure autem, sint laborum. 
+       Reiciendis in animi non, sed cumque minima?`,
+    createdOn: new Date(),
     url: '#',
   },
   {
     id: '1415',
     src: '//v2.grommet.io/assets/IMG_4245.jpg',
-    title: 'title',
+    title: 'Lorem ipsum dolor sit',
+    description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
+       Vel dolores voluptatem repudiandae voluptates voluptate cupiditate
+       explicabo omnis et, blanditiis, iure autem, sint laborum. 
+       Reiciendis in animi non, sed cumque minima?`,
+    createdOn: new Date(),
     url: '#',
   },
 ];
@@ -81,20 +111,7 @@ const Home = () => {
           }}
         >
           <Box gridArea='caption' justify='center' pad='large' gap='small'>
-            <Box direction='row'>
-              <Box pad='small'>
-                <Box border={{size: 'small', side: 'right', color: 'gray'}} pad={{right: 'medium'}}>
-                  <Heading level='1'>16</Heading>
-                  <Text>APR</Text>
-                </Box>
-              </Box>
-              <Box justify='center'>
-                <Heading level='2' textAlign='start'>Lorem ipsum dolor sita creem</Heading>
-              </Box>
-            </Box>
-            <Box >
-              <Paragraph textAlign='start'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti officia velit nulla ipsa, consequuntur accusamus cupiditate voluptas nam explicabo, debitis quis? Enim soluta quibusdam aspernatur quo explicabo necessitatibus. Qui, facilis.</Paragraph>
-            </Box>
+            <PostHeader data={posts[0]} backgroundColor='white' color='black' layout='column'/>
           </Box>
           <Box gridArea='image' justify='center' pad='large' gap='small'>
             <Image src="//v2.grommet.io/assets/IMG_4245.jpg" fit="cover" />
