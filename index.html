@@ -1,18 +1,41 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Sparkle Faerie Coder</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" />
-</head>
-<body>
-<div id="root"></div>
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-app.js"></script>
+	<head>
+		<title>Sparkle Faerie Coder</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<div id="root"></div>
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
+		<!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-analytics.js"></script>
-<script src="./index.js"></script>
-</body>
+		<script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-analytics.js"></script>
+
+		<script>
+			// Your web app's Firebase configuration
+			var firebaseConfig = {
+				apiKey: 'AIzaSyCgqj_1mWK0ZqKhqYKF_PbYiFGc2fI38aY',
+				authDomain: 'spf-blog-service.firebaseapp.com',
+				databaseURL: 'https://spf-blog-service.firebaseio.com',
+				projectId: 'spf-blog-service',
+				storageBucket: 'spf-blog-service.appspot.com',
+				messagingSenderId: '503763428128',
+				appId: '1:503763428128:web:4c9b491922499760162d45',
+				measurementId: 'G-27E8CGG6XE',
+			};
+			// Initialize Firebase
+			firebase.initializeApp(firebaseConfig);
+			firebase.analytics();
+		</script>
+		<script src="./index.js"></script>
+	</body>
 </html>

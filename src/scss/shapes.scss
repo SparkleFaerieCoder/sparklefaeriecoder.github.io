@@ -1,0 +1,93 @@
+// Shapes
+
+.dot {
+	--size: 10px;
+	background-color: white;
+	border-radius: calc(var(--size) * 2);
+	height: var(--size);
+	width: var(--size);
+	opacity: 50%;
+	margin: calc(var(--size) / 4);
+}
+
+.flower {
+	--petal-width: 0;
+	--petal-height: 0;
+	--petal-border-left: 40px solid transparent;
+	--petal-border-right: 40px solid transparent;
+	--petal-border-bottom: calc(43px * 2) solid var(--petal-color);
+	--petal-position: absolute;
+	--petal-border-radius: 100%;
+	--petal-color: white;
+	--overlay-border-left: 30px solid transparent;
+	--overlay-border-right: 30px solid transparent;
+	--overlay-border-bottom: 80px solid var(--overlay-color);
+	--overlay-position: absolute;
+	--overlay-top: 0px;
+	--overlay-left: -30px;
+	--overlay-border-radius: 100%;
+	--overlay-color: black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 500px;
+	height: 500px;
+	position: relative;
+	z-index: 0;
+}
+
+.petals {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 250px;
+	height: 250px;
+	z-index: 1000;
+	position: absolute;
+}
+
+.circle {
+	width: 50px;
+	height: 50px;
+	border: 1px solid var(--petal-color);
+	border-radius: 100%;
+	z-index: 0;
+}
+
+.triangle {
+	width: var(--petal-width);
+	height: var(--petal-height);
+	border-left: var(--petal-border-left);
+	border-right: var(--petal-border-right);
+	border-bottom: var(--petal-border-bottom);
+	position: var(--petal-position);
+	border-radius: var(--petal-border-radius);
+	&:before {
+		content: '';
+		width: var(--petal-width);
+		height: var(--petal-height);
+		border-left: var(--overlay-border-left);
+		border-right: var(--overlay-border-right);
+		border-bottom: var(--overlay-border-bottom);
+		position: var(--overlay-position);
+		top: var(--overlay-top);
+		left: var(--overlay-left);
+		border-radius: var(--overlay-border-radius);
+	}
+}
+
+.up {
+	transform: rotate(0deg) translate(0, 70px);
+}
+
+.down {
+	transform: rotate(180deg) translate(0, 70px);
+}
+
+.left {
+	transform: rotate(-90deg) translate(0, 70px);
+}
+
+.right {
+	transform: rotate(90deg) translate(0, 70px);
+}
